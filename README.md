@@ -2,7 +2,7 @@
 An opinionated CSV Writer
 
 # Overview
-A micro-library which converts Java List<List<String> to CSV.
+A micro-library which converts Java `List<List<String>>` to CSV.
 
 # Benefits
 - Very small
