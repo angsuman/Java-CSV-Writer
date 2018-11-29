@@ -57,7 +57,7 @@ Generate the reports with:
 
 # Benefits
 
-* Very small
+* Very small (17 logical lines of code, 62 in total including comments etc. )
 * Single-purpose library without any bloat.
 * Zero external dependencies
 * Well tested (comes with unit tests)

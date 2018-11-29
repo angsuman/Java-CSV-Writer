@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
+ * Refer to README.md for usage details.
  */
 public class CSVWriter {
     private static final String COMMA = ",";
