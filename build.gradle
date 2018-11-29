@@ -2,7 +2,12 @@ plugins {
     id 'groovy'
     id 'com.github.spotbugs' version '1.6.5'
 }
+// Required for Spock tests only.
 sourceCompatibility = 1.8
+
+// Create jar with 'gradle  -Pversion=1.0.1 jar'
+version "${version}"
+
 repositories {
     jcenter()
 }
@@ -10,11 +15,4 @@ repositories {
 dependencies {
     compile "org.codehaus.groovy:groovy-all:2.5.4"
     testCompile "org.spockframework:spock-core:1.2-groovy-2.5"
-}
-
-tasks.withType(com.github.spotbugs.SpotBugsTask) {
-    reports {
-        xml.enabled = false
-        html.enabled = true
-    }
 }

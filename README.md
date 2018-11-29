@@ -38,7 +38,12 @@ This example shows how Employee data (as Collection of Employee Objects) is conv
     }
     String csv = CSVWriter.encode(data)); // This method `encode` is all you need to know!
 
-Another example is in [CSVWriterTest](src/test/groovy/com/taragana/csv/CSVWriterTest.groovy) (written in Groovy).
+A simple example is in [CSVWriterTest](src/test/groovy/com/taragana/csv/CSVWriterTest.groovy) (written in Groovy).
+
+    List<String[]> lines = Arrays.asList(["India"], ["is"], ["great!"]);
+    assert CSVWriter.encode(lines).equals("\"" + lines.get(0)[0] + "\"\n\"" + lines.get(1)[0] + "\"\n\"" + lines.get(2)[0] + "\"");
+
+You can also encode individual lines with `encodeLine` and cell / field with `encodeField`
 
 # Library Code Reports
 
