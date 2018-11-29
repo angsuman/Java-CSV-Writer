@@ -8,6 +8,38 @@ A micro-library which converts Java `List<List<String>>` to CSV.
 
 # How to use
 
+This example shows how Employee data (as Collection of Employee Objects) is converted to CSV format.
+
+    import com.taragana.csv.CSVWriter;
+    
+    ...
+
+    List<List<String>> data = new ArrayList<>(); // CSV data holder
+    List<String> employee = new ArrayList<>();
+    
+    // CSV headers added
+    employee.add("ID");
+    employee.add("Name");
+    employee.add("Mobile");
+    employee.add("Email");
+    employee.add("Gender");
+
+    result.add(employee); // Adding header
+    
+    for(Employee e : employeeData) { // Individual Employee data added 
+        employee = new ArrayList<>();        
+        employee.add("" + e.id);
+        employee.add(e.name);
+        employee.add(e.mobile);
+        employee.add(e.email);
+        employee.add(e.gender);
+            
+        result.add(employee);
+    }
+    String csv = CSVWriter.encode(data)); // This method `encode` is all you need to know!
+
+Another example is in [CSVWriterTest](src/test/groovy/com/taragana/csv/CSVWriterTest.groovy) (written in Groovy).
+
 # Library Code Reports
 
 Generate the reports with:
